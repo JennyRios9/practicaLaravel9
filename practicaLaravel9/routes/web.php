@@ -14,5 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('prueba.principal');
 });
+
+
+Route::get('/vistaDos', function () {
+    return view('prueba.prueba2.prueba2');
+});
+
+
+Route::get('/vistaTres', function () {
+    return view('prueba.prueba2.prueba3.prueba3');
+});
+
+Route::get('empleados', function () {
+    $mensaje = 'vista principal empleados';
+    return $mensaje;
+});
+
