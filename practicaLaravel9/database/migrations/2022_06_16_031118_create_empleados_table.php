@@ -21,6 +21,8 @@ return new class extends Migration
             $table->timestamps();
             $table->integer('edad');
             $table->integer('idCargo')->unsigned();
+            $table->foreign('idCargo')->references('id')->on('cargos');
+            
         });
     }
 
