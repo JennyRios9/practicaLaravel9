@@ -22,5 +22,10 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(Cargos_Seeder::class);
+
+     DB::statement('SET FOREIGN_KEY_CHECKS = 0;'); // se eliminan las llaves FK
+    DB::table('cargo')->truncate(); // se borra la tabla
+    DB::statement('SET FOREIGN_KEY_CHECKS = 1;'); // se activan las Fk
+    $this->call(Cargos_Seeder::class); // Se crea la tabla y se llena
     }
 }
