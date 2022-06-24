@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Empleado\Cargo;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB; //esta clase la debo importar
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
