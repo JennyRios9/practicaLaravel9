@@ -27,11 +27,11 @@
                     <div class="modal-body">
                         @csrf
 
-                        @if($errors->any())
+                        <!-- @if($errors->any())
                             @foreach($errors->all() as $error)
                                 <p>{{$error}}</p>
                             @endforeach
-                        @endif
+                        @endif -->
 
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
@@ -77,6 +77,17 @@
     </div>
     <!-- FIN Modal CREAR EMPLEADO-->
 <br>
+
+<br>
+
+@if (session('mensaje'))
+    <div class="alert alert-success">
+        {{ session('mensaje') }}
+    </div>
+@endif
+
+<br>
+
 <table class="table">
     <thead>
         <tr>
@@ -112,4 +123,15 @@
 <div class="d-flex justify-content-center">
     {{ $empleados->links() }}
 </div>
+
+@endsection
+
+@section('scripts')
+    @if($errors->any())
+    <script>
+        $(document).ready(function(){
+            $('#crearEmpleadoModal').modal('show')
+        })
+    </script>
+    @endif
 @endsection
