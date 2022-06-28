@@ -27,5 +27,7 @@ class Cargos_Seeder extends Seeder
         DB::table('cargos')->insert([
             'nombre'=> 'Coordinador',
         ]);
+
+        Cargo::factory()->times(10)->create();
     }
 }
