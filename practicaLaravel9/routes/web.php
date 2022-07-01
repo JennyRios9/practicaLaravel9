@@ -43,3 +43,5 @@ Route::post('empleados', [EmpleadosController::class, 'guardar'])->name('emplead
 
 //esta ruta es para actualizar
 Route::put('empleados/{empleado}', [EmpleadosController::class, 'actualizar'])->name('empleadoActualizar');
+
+Route::delete('empleados/{empleado}', [EmpleadosController::class, 'eliminar'])->name('empleadoEliminar');
